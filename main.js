@@ -195,7 +195,7 @@ function getPos()
   navigator.geolocation.getCurrentPosition(geo_mode)
 }
 
-document.getElementById("ciao").onclick = () => {
+document.getElementById("container").onclick = () => {
   if (!$('#mode').is(':disabled'))
   {
     $('#mode').bootstrapToggle('toggle')
