@@ -147,7 +147,6 @@ async function common(lat, lon)
         utc += "00"
       else
         utc += pad(60 / (10 / parseInt(utcs[1])), 2)
-      console.log(utc)
       dt = new Date(b.formatted)
   })
 }
@@ -155,12 +154,6 @@ async function common(lat, lon)
 function geo_mode(pos) {
   let lat = pos.coords.latitude
   let lon = pos.coords.longitude
-  console.log(lat, lon)
-  if (lat === undefined || lon === undefined)
-  {
-    error()
-    return
-  }
   fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}`)
   .then(r => r.json())
   .then(b =>
