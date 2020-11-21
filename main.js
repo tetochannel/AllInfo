@@ -190,9 +190,15 @@ function ip_mode() {
   })
 }
 
+function error()
+{
+  $('#mode').bootstrapToggle('enable')
+  modes[0]() 
+}
+
 function getPos()
 {
-  navigator.geolocation.getCurrentPosition(geo_mode)
+  navigator.geolocation.getCurrentPosition(geo_mode, error)
 }
 
 document.getElementById("container").onclick = () => {
