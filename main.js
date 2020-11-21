@@ -212,6 +212,7 @@ document.getElementById("container").onclick = () => {
   }
 }
 
+
 function init()
 {
   if (localStorage.getItem("mode") === null)
