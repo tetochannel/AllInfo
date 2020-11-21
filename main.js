@@ -155,6 +155,11 @@ async function common(lat, lon)
 function geo_mode(pos) {
   let lat = pos.coords.latitude
   let lon = pos.coords.longitude
+  if (lat === undefined || lon === undefined)
+  {
+    error()
+    return
+  }
   fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}`)
   .then(r => r.json())
   .then(b =>
