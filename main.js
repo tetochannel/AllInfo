@@ -155,6 +155,7 @@ async function common(lat, lon)
 function geo_mode(pos) {
   let lat = pos.coords.latitude
   let lon = pos.coords.longitude
+  console.log(lat, lon)
   if (lat === undefined || lon === undefined)
   {
     error()
