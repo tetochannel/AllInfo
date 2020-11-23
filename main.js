@@ -150,7 +150,7 @@ async function common(lat, lon)
         utc += "00"
       else
         utc += pad(60 / (10 / parseInt(utcs[1])), 2)
-      dt = new Date(b.formatted)
+      dt = new Date(b.formatted.replace(" ", "T"))
   })
 }
 
