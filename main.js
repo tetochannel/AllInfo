@@ -107,7 +107,7 @@ function setMap(res, ip) {
     q += `</nobr>`
   }
   let osmUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-    osmAttrib = '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    osmAttrib = '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     osm1 = L.tileLayer(osmUrl, {
       maxZoom: 18,
       minZoom: 1,
