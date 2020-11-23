@@ -28,7 +28,7 @@ function setWeather(lat, lon) {
           m++
         let ny = ((dt.getDate() + 1 + i) % y)
         if (ny === 0)
-          ny = 1
+        {ny++;m++}
         document.getElementById(`next-day-${i}`).innerText = days[(dt.getDay() + 1 + i) % days.length].substr(0, 3) +
             " " + ny + " " + months[m].substr(0, 3)
         document.getElementById(`next-weather-${i}`).src = "https://openweathermap.org/img/wn/" + b.daily[i].weather[0].icon + "@2x.png"
