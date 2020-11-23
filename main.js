@@ -20,7 +20,7 @@ function setWeather(lat, lon) {
       document.getElementById("current-weather").src = "https://openweathermap.org/img/wn/" + b.current.weather[0].icon + "@4x.png"
       document.getElementById("current-description").innerText = b.current.weather[0].description.charAt(0).toUpperCase() +
       b.current.weather[0].description.substring(1, b.current.weather[0].description.length)
-      document.getElementById("current-temp").innerText = Math.floor(b.current.temp) + " °C"
+      document.getElementById("current-temp").innerText = Math.ceil(b.current.temp) + " °C"
       for (let i = 0; i < forecastDays; i++) {
         let m = dt.getMonth()
         let y = (new Date(dt.getFullYear(), dt.getMonth() + 1, 0).getDate())
