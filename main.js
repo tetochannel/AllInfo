@@ -32,7 +32,7 @@ function setWeather(lat, lon) {
         document.getElementById(`next-description-${i}`).innerText =
           b.daily[i].weather[0].description.charAt(0).toUpperCase() +
           b.daily[i].weather[0].description.substring(1, b.daily[i].weather[0].description.length)
-        document.getElementById(`next-max-temp-${i}`).innerText = Math.floor(b.daily[i].temp.max) + "°C"
+        document.getElementById(`next-max-temp-${i}`).innerText = Math.ceil(b.daily[i].temp.max) + "°C"
         document.getElementById(`next-felt-temp-${i}`).innerText = Math.floor(b.daily[i].feels_like.day) + "°C"
       }
     });
