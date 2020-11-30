@@ -24,11 +24,9 @@ function setWeather(lat, lon) {
       for (let i = 0; i < forecastDays; i++) {
         let m = dt.getMonth()
         let y = (new Date(dt.getFullYear(), dt.getMonth() + 1, 0).getDate())
-        if (dt.getDate() === y)
-          m++
         let ny = dt.getDate() + 1 + i
         if (ny > y)
-          {ny = (ny % y); m++}
+          {ny = (ny % y); m = (m + 1) % 12}
         document.getElementById(`next-day-${i}`).innerText = days[(dt.getDay() + 1 + i) % days.length].substr(0, 3) +
             " " + ny + " " + months[m].substr(0, 3)
         document.getElementById(`next-weather-${i}`).src = "https://openweathermap.org/img/wn/" + b.daily[i].weather[0].icon + "@2x.png"
